@@ -1,0 +1,191 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<style>
+
+#myheader {color:blue ; 
+		   border:2px solid Green; }
+
+.respostas{
+            background-color: green;
+        }
+perguntas {
+  background-color: #b0e0e6;
+  padding:          15px;
+  margin:           0px 330px 10px 10px;
+}
+.col-50 {
+  background:       lightgrey url(/images/coruja.jpg) bottom right;
+  font-size:        105%;
+  padding:          10px;
+  margin:           0px 20px 10px 30px;
+  position:         absolute;
+  top:              110px;
+  right:            600px;
+  width:            170px;
+}
+.titulos{ 
+	color: green;
+	font-family: Arial;
+	background-color: lightgrey;
+	font-size:        180%;
+}	
+body { background-color: lightgrey;
+}	
+demo1{font-size: 105%; }
+
+h3 {
+  text-align: center;
+}
+
+</style>
+</head>
+<body>
+	<h1 id="myheader" >Holla Que tal!! PASSATEMPO !!</h1>
+	<!-- Use JavaScript to change the text size of the <p> element to 40 pixels. -->
+	<p id="demo1">LOCALIDADES E SEUS PAÍSES (Informe a direita os Números correspondentes)</p>
+	<script>
+		document.getElementById("demo1").style.fontSize = "20px";
+		<!-- Use JavaScript to set the color of the <p> element to "blue". -->
+		document.getElementById("demo1").style.color = "red";
+	</script>
+    <div perguntas>
+	<ol class="titulos">
+		<li>Olinda</li>
+		<li>Nova York</li>
+		<li>Atenas</li>
+		<li>Porto</li>
+		<li>Barcelona</li>
+		<li>Lima</li>
+		<li>Rosário</li>
+		<li>Havana</li>
+		<li>Iaundé</li>
+		<li>Piongyang</li>
+	</ol>
+	</div>
+	<!-- 	<script type="text/javascript">
+		var nome = prompt('Digite seu nome: ');
+		alert(nome + ', seja bem vindo!');
+	</script> -->
+	
+	<div class="col-50">
+		<!-- agora montar lista de opções --> 
+	<form>
+		<label for="pin">Cuba   :</label>
+		<input type="numeric" id="cub" name="cub" maxlength="1"size="1" autofocus><br>
+		<label for="pin">Peru   :</label>
+		<input type="numeric" id="per" name="per" maxlength="1" size="1"><br>
+		<label for="pin">Espanha:</label>
+		<input type="numeric" id="esp" name="esp" maxlength="1" size="1"><br>
+		<label for="pin">Estados Unidos:</label>
+		<input type="numeric" id="usa" name="usa" maxlength="1" size="1"><br>
+		<label for="pin">Grécia   :</label>
+		<input type="numeric" id="gre" name="gre" maxlength="1" size="1"><br>
+		<label for="pin">North Korea:</label>
+		<input type="numeric" id="cor" name="cor" maxlength="2" size="1"><br>
+		<label for="pin">Argentina:</label>
+		<input type="numeric" id="arg" name="arg" maxlength="1" size="1"><br>
+		<label for="pin">Brasil  :</label>
+		<input type="numeric" id="bra" name="bra" maxlength="1" size="1"><br>
+		<label for="pin">Portugal:</label>
+		<input type="numeric" id="por" name="por" maxlength="1" size="1"><br>
+		<label for="pin">Camarões:</label>
+		<input type="numeric" id="cam" name="cam" maxlength="2" size="1"><br>
+		<!-- aqui deve chamar e validar respostas  object HTMLInputElement -->
+		<p>Click em "Verificar" para verificar acertos.</p>
+		<button onclick="myFunction()">Verificar</button>
+	</form>			
+		<p id="demo"></p>
+		<script>
+			function myFunction() 
+			{
+			var acertos = " ";
+			var tt_certo = 0;
+			var y = document.getElementById("cub").value;
+			if (y === "8") {
+			    acertos = "Cuba  ";
+				tt_certo++;
+			}
+			var x = document.getElementById("per").value;
+			if (x === "6") {
+   		        acertos = acertos + "Peru ";
+			   tt_certo++;
+			} 
+			var u = document.getElementById("esp").value;
+			if (u === "5") {
+ 		       acertos = acertos + " Espanha ";
+   		       tt_certo++;
+			   // alert("Certos: " + tt_certo + " Espanha");
+			}				
+			var l = document.getElementById("usa").value;
+			if (l === "2") {
+				acertos = acertos + " U.S.A. ";
+  			    tt_certo++;
+			}
+			var m = document.getElementById("gre").value;
+			if (m === "3") {
+				   acertos = acertos + " Grécia ";
+				   tt_certo++;
+			}
+			var r = document.getElementById("cor").value;
+			if (r === "10") {
+			   acertos = acertos + " Coréia do Norte";
+			   tt_certo++;
+			}			
+			var s = document.getElementById("arg").value;
+			if (s === "7") {
+			   acertos = acertos + " Argentina";
+			   tt_certo++;
+			}
+			var o = document.getElementById("bra").value;
+			if (o === "1") {
+			   acertos = acertos + " Brasil";
+			   tt_certo++;
+			}				
+			var q = document.getElementById("por").value;
+			if (q === "4") { // quatro 
+			   acertos = acertos + " Portugal";
+			   tt_certo++;
+			}				
+			var t = document.getElementById("cam").value;
+			if (t === "9") {
+			   acertos = acertos + " Camarões";
+			   tt_certo++;
+			}
+
+			if (tt_certo > 0) {
+				if (tt_certo === 1){
+					alert("Você acertou " + tt_certo + " país: " + acertos); } 
+				else {
+					alert("Você acertou " + tt_certo + " países: " + acertos);
+					}
+			// limpar inputs		
+			}
+			else
+			{
+				alert("Você acertou nenhum");  
+			}
+			}
+		</script>
+	</div>
+    <div rodape color:blue> 
+		<h3 style="border:2px solid Green;">Fonte Folhinha Sagrado Coração de Jesus de 08/03/2021</h3>
+	</div>	
+	<a href="https://index.php" title="Retornar "></a>
+<!--
+	<div class="validar">
+	<button type="button"onclick="document.getElementById('demo').innerHTML = number">Click me to display Date and Time.</button>
+		<p id="demo"></p>
+		<script>
+			var myInput = document.getElementById("cub");
+			var txt = "";
+			var arrayPaises = ["1 Brasil", "2 United States", "3 Grécia", "4 Portugal", "5 Espanha", "6 Peru", "7 Argentina", "8 Cuba", "4 Coréia do Norte", "9 Camarões", "10 Coreia da Norte"]; 		
+			for (i = 0; i < arrayPaises.length; i++){
+				txt += arrayPaises[i] + " ";
+			}
+			document.getElementById("demo").innerHTML = txt + myInput;
+		</script>
+	</div>	 -->
+</body>
+</html>
+
